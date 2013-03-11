@@ -8,7 +8,9 @@ feature "Example" do
   
   describe "some tests" do     
     it "should search for donuts" do
-      fill_in "gbqfq", :with => "donuts"
+      # Search for donuts - this is specific to the mobile version of google.com at this point.
+      fill_in "q", :with => "donuts"
+      click_button "tsbb"
       page.should have_content "Doughnut - Wikipedia, the free encyclopedia"
     end
   end
